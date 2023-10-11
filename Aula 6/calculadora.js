@@ -8,16 +8,16 @@ app.use(express.json())
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.sendFile(_dirname + "/conta.ejs")
+res.render('conta')
 })
 
-app.post('/',(req, res) => {
-    const n1 = Number.body.n1
-    const n2 = Number.body.n2
-    
-    const soma = n1 + n2
-
-    res.send("resultado:" +soma)
+app.post('/app',(req, res) => {
+const data = {
+n1: req.body.n1,
+n2: req.body.n2,
+res: parseFloat(req.body.n1) + parseFloat(req.body.n2),
+}
+res.render('resultado', {data})
 })
 
 app.listen(PORT, () => {
