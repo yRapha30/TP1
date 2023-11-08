@@ -18,4 +18,8 @@ app.get("/Port", (requisicao, resposta) => {
     resposta.render('PS')
 })
 
+app.get("/C", (requisicao, resposta) => {
+    resposta.render('C++')
+})
+
 app.listen(8080)
