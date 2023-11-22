@@ -50,4 +50,19 @@ body{
 }
 .conteudo{
     clear: both;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+#dudh{
+    margin-left: 7%;
+    margin-top: 5%;
+    width: 85%;
+    height: 40%;
+}
+#p1{
+    font-size: 70%;
+}
+#hh1{
+    text-decoration: none;
 }
