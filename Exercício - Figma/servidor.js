@@ -15,15 +15,19 @@ app.get("/du", (requisicao, resposta) => {
 })
 app.get('/log', (request, response) => {
     resultado = ""
-    response.render('index', { resultado })
+    response.render('login', { resultado })
 })
 app.post('/salvar', (req, res) => {
-    let nomeNoForm = req.body.nome
-    let cadastro = {nome: nomeNoForm}
-    console.log(cadastro);
-    console.log('\n'+JSON.stringify(cadastro)+',');
-    fs.appendFileSync('nomes.json', `\n${JSON.stringify(cadastro)}`)
-    resultado = `Olá, ${nomeNoForm}`
-    res.render('index', { resultado })
+    dados = {
+        nome: req.body.nome,
+        sobrenome: req.body.sobrenome,
+        senha: req.body.pass,
+        Email: req.body.email,
+        Nascimento: req.body.dia,
+    }
+    fs.appendFileSync('usuario.json', `\n${JSON.stringify(dados)}`)
+    resultado = `Olá, ${dados}`
+    res.render('login', { resultado })
 })
+
 app.listen(PORT, () => console.log(`Server rodando na porta ${PORT}`))
