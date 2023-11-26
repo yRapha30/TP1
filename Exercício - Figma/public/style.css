@@ -50,7 +50,6 @@ body{
     float: left;
     width: 550px;
     height: 815px;
-    flex-shrink: 0;
     background-color: #D9D9D9;
 }
 .conteudo{
@@ -71,5 +70,6 @@ body{
     height: 390px;
 }
 #im3{
-    margin-left: 15%;
+
+    width: 3%;
 }
