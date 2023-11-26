@@ -1,0 +1,40 @@
+body{
+        
+       
+    background-color: white;
+    background-attachment: fixed;
+    
+}
+.cabeca{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    color: black;
+    text-align: left;
+    color: white;
+    
+}
+.menu{
+    margin: 0%;
+    background-color: #D9D9D9;
+    
+}
+.menu a{
+    margin: 0%;
+    background-color: #D9D9D9;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 1px 30px 1px 10px;
+    
+}
+.menu a:hover{
+    color: white;
+    background-color: black;
+
+}
+.login{
+    
+    float: left;
+}
