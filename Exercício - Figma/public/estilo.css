@@ -5,28 +5,31 @@ body{
     
 }
 .cabeca{
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
-    color: black;
-    text-align: left;
     margin: 0;
+    background-color: rgb(0, 0, 0);
+    padding: 1%;
+    text-align: left;
     color: white;
+    
 }
 .menu{
-    background-color: rgb(128, 128, 128);
+    margin: 0;
+    background-color: #BDBDBD;
+    
 }
 .menu a{
-    background-color: #D9D9D9;
-    color: white;
+    margin: 0;
+    background-color:#BDBDBD;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    display: block;
-    float: left;
+    display: inline-block;
+
     padding: 1px 30px 1px 10px;
     
 }
 .menu a:hover{
-    color: black;
-    background-color: #D9D9D9;
+    color: white;
+    background-color: black;
 
 }
 .coluna-lateral-esquerda{
@@ -65,4 +68,8 @@ body{
 }
 #hh1{
     text-decoration: none;
+}
+#im3{
+
+    width: 3%;
 }
