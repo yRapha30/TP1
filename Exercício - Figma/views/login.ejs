@@ -3,6 +3,7 @@
   <meta name="description" content="Aprenda a criar um site completo que usa formulários em HTML">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" href="login.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   </head>
   
   <body>
@@ -10,17 +11,116 @@
         <h1>Help Center - LOGIN | <img id="im3" src="img/ma.png" alt="ams"></h1>
 
     </div>
-    <div class="menu">
-        <a href="/">
-            <p>Início</p>
+    <!--Inicio Menu-->
+    <div class="sidebar close">
+      
+        <div class="logo-details">
+          
+          <i class="bx bx-menu"></i>
+          <span class="logo_name">Menu</span>
+       
+        </div>
+        
+        <ul class="nav-links">
+            <!--Início-->
+          <li>
+            
+            <a href="/">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="link_name">Início</span>
+            </a>
+              
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="/">Início</a></li>
+            </ul>
+            
+          </li>
+          <!--Fim!-->
+          <li>
+            
             <a href="du">
-                <p>
-                    DUDH
-                </p>
+              <i class='bx bx-pie-chart-alt-2' ></i>
+              <span class="link_name">DUDH</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="du">DUDH</a></li>
+            </ul>
+          </li>
+          <!--Posts-->
+          <li>
+            
+            <div class="iocn-link">
+              
+              <a href="#">
+                <i class='bx bx-book-alt' ></i>
+                <span class="link_name">Posts</span>
+              </a>
+              
+              <i class='bx bxs-chevron-down arrow' ></i>
+            
+            </div>
+            
+            <ul class="sub-menu">
+            
+              <li><a class="link_name" href="#">Posts</a></li>
+              <li><a href="cre">Creditos</a></li>
+              <li><a href="#">Técnologia</a></li>
+            
+            </ul>
+          </li>
+          <!--Fim!-->
+          
+          <li>
+            
+            <a href="#">
+              <i class='bx bx-cog' ></i>
+              <span class="link_name">Configurações</span>
             </a>
             
-    </div>
-
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Configurações</a></li>
+            </ul>
+          </li>
+          <li>
+        
+            <div class="profile-details">
+              
+              <div class="profile-content">
+                <!--<img src="image/profile.jpg" alt="profileImg">-->
+              </div>
+              
+              <div class="name-job">
+                
+                <div class="profile_name">Help Center</div>
+                <div class="job">Início</div>
+              
+              </div>
+              
+              <i class="bx bx-log-out"></i>
+            
+            </div>
+          
+          </li>
+        </ul>
+      </div>
+      <!--Fecha Menu-->
+      <script>
+  
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+          arrow[i].addEventListener("click", (e)=>{
+         let arrowParent = e.target.parentElement.parentElement;
+         arrowParent.classList.toggle("showMenu");
+          });
+        }
+        
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+          sidebar.classList.toggle("close");
+        });
+    </script>
   <div class="login">
     <form class="formulario" method="post" action="/salvar">
         

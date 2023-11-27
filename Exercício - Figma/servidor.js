@@ -17,6 +17,10 @@ app.get('/log', (request, response) => {
     resultado = ""
     response.render('login', { resultado })
 })
+app.get('/cre', (request, response) => {
+    resultado = ""
+    response.render('creditos', { resultado })
+})
 app.post('/salvar', (req, res) => {
     dados = {
         nome: req.body.nome,
