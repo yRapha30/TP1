@@ -22,54 +22,43 @@
     </div>
 
   <div class="login">
-  <form action="/salvar" method="post">
-  
-  <!-- DADOS PESSOAIS-->
-  <fieldset>
-  <legend>Dados Pessoais</legend>
-  <table cellspacing="30">
-  <tbody><tr>
-  <td>
-  <label for="nome">Nome: </label>
-  </td>
-      <td align="left">
-      <input type="text" name="nome" id="nome">
-  </td>
-  <td>
-      <label for="sobrenome">Sobrenome: </label>
-  </td>
-      <td align="left">
-      <input type="text" name="sobrenome" size = "20" id="sobrenome">
-  </td>
-  </tr>
-  <tr>
-  <td>
-      <label>Nascimento: </label>
-  </td>
-  <td align="left">
-      <label for="Nascimento"></label>
-      <input type="date" name="dia" size="20" maxlength="2" value="dd" id="Nascimento">
-  </td>
-  </tr>
-  <tr>
-  <td>
-      <label for="mail">E-mail: </label>
-  </td>
-  <td align="left">
-      <input type="email" name="email" size="30" maxlength="13" id="mail">
-  </td>
-  </tr> 
-  <tr>
-  <td>
-      <label for="mail">Senha: </label>
-  </td>
-  <td align="left">
-      <input type="password" name="pass" size="20" maxlength="40" id="senha">
-      </td>
-      </tr>    
-  </tbody></table>
-  <input type="submit" value="Enviar formulário" id="1a20">
-  </fieldset>
-</div>
-  </form>
+    <form class="formulario" method="post" action="/salvar">
+        
+        <h2 class="titulo">Sing up</h2>
+        <label class="label">
+            
+            <input type="text" class="input-bordas" placeholder="Nome" name="nome" required="">
+            <span class="focus-border"> <i></i> </span>
+        
+        </label>
+        <label class="label">
+            
+            <input type="text" class="input-bordas" placeholder="sobrenome" name="sobrenome" required="">
+            <span class="focus-border"> <i></i> </span>
+        
+        </label>
+        <label class="label">
+            
+            <input type="text" class="input-bordas" placeholder="E-mail" name="email" required="">
+            <span class="focus-border"> <i></i> </span>
+        
+        </label>
+        <label class="label">
+            
+            <input type="password" class="input-bordas textarea" rows="4" placeholder="Senha" name="pass" required=""></textarea>
+            <span class="focus-border"> <i></i> </span>
+        
+        </label>
+        <label class="naoexibir">
+            <span>Não preencher:</span><br>
+            <input type="text" name="url" value=""></p>
+        </label> 
+        <label class="label">
+            
+            <input type="date" class="input-bordas textarea" rows="4" placeholder="Nascimento" name="dia" required=""></textarea>
+            <span class="focus-border"> <i></i> </span>
+        
+        </label>
+        <button class="button-form borda-inversa"> Enviar</button>
+    </form>  
   </body></html>
