@@ -33,28 +33,30 @@ body{
 
 }
 .coluna-lateral-esquerda{
+
     text-align: center;
     margin-top: 5%;
     font-size: 15pt;
-    margin-left: 2%;
     float: left;
-    width: 550px;
-    height: 815px;
+    width: 30vw;
+    height: 85vh;
     flex-shrink: 0;
     background-color: #D9D9D9;
 }
 
 .coluna-lateral-direita{
-    margin-left: 11%;
+
     margin-top: 5%;
     text-align: center;
     font-size: 15pt;
     float: left;
-    width: 550px;
-    height: 815px;
+    width: 30vw;
+    height: 85vh;
     background-color: #D9D9D9;
 }
 .conteudo{
+    display: flex;
+    justify-content: space-around;
     clear: both;
 }
 #im1{
