@@ -7,6 +7,13 @@ app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true }))
 const PORT = 8080
 
+let vetorNomes = []
+if (fs.existsSync('nomes.json')) {
+    const dados = fs.readFileSync('nomes.json', 'utf-8')
+    console.log(dados);
+    vetorNomes = JSON.parse(dados)
+}
+
 app.get("/", (requisicao, resposta) => {
     resposta.render('Início')
 })
@@ -22,8 +29,6 @@ app.get('/cre', (request, response) => {
     response.render('creditos', { resultado })
 })
 app.post('/salvar', (req, res) => {
-    let nom = req.body.nome
-    let sob = req.body.sobrenome
     dados = {
         nome: req.body.nome,
         sobrenome: req.body.sobrenome,
@@ -32,7 +37,7 @@ app.post('/salvar', (req, res) => {
         Nascimento: req.body.dia,
     }
     fs.appendFileSync('usuario.json', `\n${JSON.stringify(dados)}`)
-    resultado = `Olá, ${nom} ${sob}`
+    resultado = `Olá, ${dados}`
     res.render('login', { resultado })
 })
 
