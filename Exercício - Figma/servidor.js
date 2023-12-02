@@ -13,6 +13,9 @@ app.get("/", (requisicao, resposta) => {
 app.get("/du", (requisicao, resposta) => {
     resposta.render('DUDH')
 })
+app.get("/lis", (requisicao, resposta) => {
+    resposta.render('lista')
+})
 app.get('/log', (request, response) => {
     resultado = ""
     response.render('login', { resultado })
@@ -35,6 +38,8 @@ app.post('/salvar', (req, res) => {
     resultado = `Olá, ${nom} ${sob}`
     res.render('login', { resultado })
 })
-
+app.get('/mostrar', (req, res) => {
+    res.render('nomes', { dados })
+})
 
 app.listen(PORT, () => console.log(`Server rodando na porta ${PORT}`))
