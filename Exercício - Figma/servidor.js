@@ -7,6 +7,13 @@ app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true }))
 const PORT = 8080
 
+let vetorNomes = []
+if (fs.existsSync('nomes.json')) {
+    const dados = fs.readFileSync('nomes.json', 'utf-8')
+    console.log(dados);
+    vetorNomes = JSON.parse(dados)
+}
+
 app.get("/", (requisicao, resposta) => {
     resposta.render('Início')
 })
@@ -27,7 +34,7 @@ app.get('/cre', (request, response) => {
 app.post('/salvar', (req, res) => {
     let nom = req.body.nome
     let sob = req.body.sobrenome
-    dados = {
+    let dados = {
         nome: req.body.nome,
         sobrenome: req.body.sobrenome,
         senha: req.body.pass,
@@ -39,7 +46,7 @@ app.post('/salvar', (req, res) => {
     res.render('login', { resultado })
 })
 app.get('/mostrar', (req, res) => {
-    res.render('nomes', { dados })
+    res.render('lista', { vetorNomes })
 })
 
 app.listen(PORT, () => console.log(`Server rodando na porta ${PORT}`))
