@@ -40,7 +40,10 @@ app.post('/salvar', (req, res) => {
         senha: req.body.pass,
         Email: req.body.email,
         Nascimento: req.body.dia,
+        Idade: req.body.ID,
     }
+    vetorNomes.push(dados)
+    fs.writeFileSync('nomes.json', JSON.stringify(vetorNomes))
     fs.appendFileSync('usuario.json', `\n${JSON.stringify(dados)}`)
     resultado = `Olá, ${nom} ${sob}`
     res.render('login', { resultado })
